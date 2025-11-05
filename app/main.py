@@ -16,10 +16,10 @@ async def wait_for_db():
                 database="ads"
             )
             await conn.close()
-            print("✅ PostgreSQL is ready!")
+            print("PostgreSQL is ready!")
             break
         except Exception as e:
-            print(f"⏳ Waiting for PostgreSQL... ({e})")
+            print(f"Waiting for PostgreSQL... ({e})")
             await asyncio.sleep(1)
 
 async def init_db(app):
